@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Modern</title>
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover
+color: #4CAF50;
+        }
+
+        /* CONTAINER */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px auto;
+            max-width: 1200px;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            width: 25%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h3 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #4CAF50;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            width: 70%;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .post {
+            margin-bottom: 30px;
+        }
+
+        .post h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .post p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #555;
+        }
+ 
+        /* FOOTER */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* ANIMASI */
+        .post:hover {
+            transform: scale(1.03);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar, .main-content {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- CONTAINER -->
+    <div class="container">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">Travel</a></li>
+                <li><a href="#">Food</a></li>
+            </ul>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <div class="post">
+<h2>Post Title #1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod libero ac arcu facilisis, a tincidunt odio volutpat. Quisque ut velit eget turpis laoreet scelerisque.</p>
+            </div>
+            <div class="post">
+                <h2>Post Title #2</h2>
+                <p>Nullam tristique sapien in ante vehicula, a malesuada lectus tincidunt. Proin id risus sit amet odio sollicitudin sodales.</p>
+            </div>
+            <div class="post">
+                <h2>Post Title #3</h2>
+                <p>Etiam at mi et eros fringilla sollicitudin. Nunc in erat nec erat sodales rutrum. Phasellus non felis viverra, viverra metus ut, fringilla augue.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Blog Modern © 2023</p>
+    </footer>
+
+    <script>
+        // JavaScript untuk interaktivitas (contohnya animasi saat scroll)
+        window.addEventListener('scroll', function() {
+            const posts = document.querySelectorAll('.post');
+            posts.forEach(post => {
+                if (post.getBoundingClientRect().top < window.innerHeight) {
+                    post.style.opacity = '1';
+                    post.style.transition = 'opacity 0.5s ease-out';
+} else {
+                    post.style.opacity = '0';
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+```
